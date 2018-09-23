@@ -10,6 +10,9 @@ public class GameObject {
     int width;
 
     int height;
+    
+    
+    boolean isAlive=true;
    
     
     GameObject( int x1, int y1,int  width1,int  height1  ){
@@ -21,14 +24,13 @@ public class GameObject {
     }
     
     public void update() {
-    	x+=1;
-    	y+=1;
+
     	
     	
     	
     }
     public void draw(Graphics g) {
-		g.fillRect(x, y, width, height);
+		
     	
     }
 }
