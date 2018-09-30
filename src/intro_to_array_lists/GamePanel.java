@@ -159,7 +159,9 @@ int ek;
 			
 			rs.x-=rs.speed;
 		}
-		  
+		  if(e.getKeyCode()==KeyEvent.VK_SPACE) {
+			  om.addProjectile(new Projectile(rs.x+22, rs.y, 10, 10));
+		  }
 	}
 
 	@Override

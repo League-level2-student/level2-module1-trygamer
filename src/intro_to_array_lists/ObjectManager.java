@@ -1,22 +1,44 @@
 package intro_to_array_lists;
 
 import java.awt.Graphics;
+import java.util.ArrayList;
+
 
 public class ObjectManager {
 
-Rocketship rs1;	
+	Rocketship rs;
+
+	ArrayList<Projectile> pj = new ArrayList<Projectile>();
 	
+	
+	
+	
+	
+	public void addProjectile(Projectile pj1) {
+
+		pj.add(pj1);
+	}
+
 	ObjectManager(Rocketship rs2){
 		
-		rs2=rs1;
-		rs1= new Rocketship(0,0,0,0,0);
+		rs=rs2;
+		
 	}
 
 public void update() {
-	rs1.update();
+	rs.update();
+	
+	for(int i = 0; i < pj.size(); i++){
+		pj.get(i).update();
+	
+		
+	}
+	
 }
 	public void draw(Graphics g) {
-		rs1.draw(g);
+		rs.draw(g);
+		for(int i = 0; i < pj.size(); i++){
+			pj.get(i).draw(g);
 	}
 
-}
+}}
