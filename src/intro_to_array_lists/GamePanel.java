@@ -13,11 +13,11 @@ import javax.swing.Timer;
 
 public class GamePanel extends JPanel implements ActionListener, KeyListener {
 	Timer t;
-	final int MENU_STATE = 0;
+	final static int MENU_STATE = 0;
 
 	final int GAME_STATE = 1;
 
-	final int END_STATE = 2;
+	final static int END_STATE = 2;
 	
 	Font  titleFont;
 	Font  startFont;
@@ -27,7 +27,7 @@ Rocketship rs = new Rocketship(250, 700, 50, 50,5);
 ObjectManager om = new ObjectManager(rs);
 
 
-int currentState = MENU_STATE;
+static int currentState = MENU_STATE;
 int ek;
 	GamePanel() {
 		t = new Timer(1000 / 60, this);
@@ -46,6 +46,7 @@ int ek;
 	
 	void updateGameState() {
 		om.update();
+		om.manageEnemies();
 	}
 	void updateEndState() {
 		

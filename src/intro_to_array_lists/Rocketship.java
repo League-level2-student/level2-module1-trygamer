@@ -17,7 +17,8 @@ public class Rocketship extends GameObject {
 	} 
 	
 	public void update() {
-		
+
+
 	}
 
 	public void draw(Graphics g) {

@@ -1,6 +1,12 @@
 package intro_to_array_lists;
 
+import java.awt.Color;
+import java.awt.Graphics;
+
 public class ALIEN extends GameObject{
+int width= 50;
+
+int height = 50;
 
 	ALIEN(int x1, int y1, int width1, int height1) {
 		super(x1, y1, width1, height1);
@@ -13,5 +19,15 @@ public class ALIEN extends GameObject{
 		 
 		
 	}
+	
+	public void draw(Graphics g){
+		g.setColor(Color.GREEN);
+		g.fillRect(x, y, width, height);
+	}
 
+	public void update(){
+	    super.update();
+		y+=1;
+	}
+	
 }
