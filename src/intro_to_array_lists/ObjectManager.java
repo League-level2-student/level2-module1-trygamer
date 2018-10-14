@@ -10,6 +10,18 @@ public class ObjectManager {
 	long enemyTimer=0;
 	int enemySpawnTime=1000;
 	
+	int score =0;
+	
+	
+	
+	public void getter(int score1) {
+		score =score1;
+		
+		
+
+		
+		
+	}
 	
 	Rocketship rs;
 
@@ -50,6 +62,7 @@ enemyTimer = System.currentTimeMillis();
 	for(int i=0 ;i< an.size();i++)	{
 
 		if(an.get(i).isAlive==false ) {
+			score ++;
 			an.remove(i);
 		}
 	}
